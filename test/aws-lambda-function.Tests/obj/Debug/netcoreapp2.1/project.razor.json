@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/chitpong/Sourcecode/aws-lambda-function/test/aws-lambda-function.Tests/aws-lambda-function.Tests.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

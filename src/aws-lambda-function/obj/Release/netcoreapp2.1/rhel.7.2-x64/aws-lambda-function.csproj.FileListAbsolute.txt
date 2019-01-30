@@ -1,0 +1,11 @@
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/bin/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.deps.json
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/bin/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.runtimeconfig.json
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/bin/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.runtimeconfig.dev.json
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/bin/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.dll
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/bin/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.pdb
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/obj/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.csprojAssemblyReference.cache
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/obj/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.csproj.CoreCompileInputs.cache
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/obj/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.AssemblyInfoInputs.cache
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/obj/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.AssemblyInfo.cs
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/obj/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.dll
+/Users/chitpong/Sourcecode/aws-lambda-function/src/aws-lambda-function/obj/Release/netcoreapp2.1/rhel.7.2-x64/aws-lambda-function.pdb
