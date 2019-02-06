@@ -17,14 +17,14 @@ namespace aws_lambda_function.Tests
         [Fact]
         public void TestFunctionMethod()
         {
-            string expected = "{\"message\":\"Hello, iFew\"}";
+            string expected = "{\"http_code\":\"200\",\"http_message\":\"Success\",\"body\":{\"message\":\"Hello, iFew\"}}";
 
 
             var function = new Function();
             var context = new TestLambdaContext();
-            var hello_result = function.FunctionHandler("iFew", context);
+            string hello_result = function.FunctionHandler("iFew", context);
 
-            Assert.Equal(expected, hello_result.Body);
+            Assert.Equal(expected, hello_result);
         }
 
         [Fact]

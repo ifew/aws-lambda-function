@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 
-using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using Newtonsoft.Json;
 
@@ -19,24 +17,18 @@ namespace aws_lambda_function
         /// </summary>
         /// <param name="inputName"></param>
         /// <param name="context"></param>
-        /// <returns></returns>
-        public APIGatewayProxyResponse FunctionHandler(string inputName, ILambdaContext context)
+        /// <returns>json result</returns>
+        public string FunctionHandler(string inputName, ILambdaContext context)
         {
-            var data = new HelloModel {
-                message = Hello(inputName)
+            respondModel respond = new respondModel {
+                http_code = "200",
+                http_message = "Success",
+                body = new HelloModel {
+                    message = Hello(inputName)
+                }
             };
 
-            APIGatewayProxyResponse respond = new APIGatewayProxyResponse {
-                StatusCode = (int)HttpStatusCode.OK,
-                Headers = new Dictionary<string, string>
-                { 
-                    { "Content-Type", "application/json" }, 
-                    { "Access-Control-Allow-Origin", "*" } 
-                },
-                Body = JsonConvert.SerializeObject(data)
-            };
-
-            return respond;
+            return JsonConvert.SerializeObject(respond);
         }
 
         public string Hello(string name)
