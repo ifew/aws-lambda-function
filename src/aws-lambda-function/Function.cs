@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
+using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
+using Newtonsoft.Json;
 
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 namespace aws_lambda_function
@@ -17,14 +20,20 @@ namespace aws_lambda_function
         /// <param name="inputName"></param>
         /// <param name="context"></param>
         /// <returns></returns>
-        public respondModel FunctionHandler(string inputName, ILambdaContext context)
+        public APIGatewayProxyResponse FunctionHandler(string inputName, ILambdaContext context)
         {
-            respondModel respond = new respondModel {
-                http_code = "200",
-                http_message = "Success",
-                body = new HelloModel {
-                    message = Hello(inputName)
-                }
+            var data = new HelloModel {
+                message = Hello(inputName)
+            };
+
+            APIGatewayProxyResponse respond = new APIGatewayProxyResponse {
+                StatusCode = (int)HttpStatusCode.OK,
+                Headers = new Dictionary<string, string>
+                { 
+                    { "Content-Type", "application/json" }, 
+                    { "Access-Control-Allow-Origin", "*" } 
+                },
+                Body = JsonConvert.SerializeObject(data)
             };
 
             return respond;
