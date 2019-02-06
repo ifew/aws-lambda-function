@@ -11,13 +11,6 @@ namespace aws_lambda_function
 {
     public class Function
     {
-        
-        /// <summary>
-        /// A simple function that takes a Name in string and does a Hello Name
-        /// </summary>
-        /// <param name="inputName"></param>
-        /// <param name="context"></param>
-        /// <returns>json result</returns>
         public string FunctionHandler(string inputName, ILambdaContext context)
         {
             respondModel respond = new respondModel {
