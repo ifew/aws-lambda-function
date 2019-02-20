@@ -26,7 +26,7 @@ namespace aws_lambda_function
 
         public string Hello(string name)
         {
-            return "Hello, " + name;
+            return "สวัสดี, " + name;
         }
 
     }

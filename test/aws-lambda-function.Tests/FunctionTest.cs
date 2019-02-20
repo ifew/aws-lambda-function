@@ -17,7 +17,7 @@ namespace aws_lambda_function.Tests
         [Fact]
         public void TestFunctionMethod()
         {
-            string expected = "{\"http_code\":\"200\",\"http_message\":\"Success\",\"body\":{\"message\":\"Hello, iFew\"}}";
+            string expected = "{\"http_code\":\"200\",\"http_message\":\"Success\",\"body\":{\"message\":\"สวัสดี, iFew\"}}";
 
 
             var function = new Function();
@@ -31,7 +31,7 @@ namespace aws_lambda_function.Tests
         public void TestHelloMethod()
         {
             string input = "iFew";
-            string expected = "Hello, iFew";
+            string expected = "สวัสดี, iFew";
 
             var function = new Function();
             string hello_result = function.Hello(input);
