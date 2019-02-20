@@ -38,6 +38,6 @@ Install Docker first!
 ```
 $ cd src/aws-lambda-function
 $ dotnet publish -c Release
-$ cs bin/Release/netcoreapp2.1/publish
+$ cd bin/Release/netcoreapp2.1/publish
 $ docker run --rm -v "$PWD":/var/task lambci/lambda:dotnetcore2.1 aws-lambda-function::aws_lambda_function.Function::FunctionHandler '"iFew"'
 ```
