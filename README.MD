@@ -39,5 +39,5 @@ Install Docker first!
 $ cd src/aws-lambda-function
 $ dotnet publish -c Release
 $ cd bin/Release/netcoreapp2.1/publish
-$ docker run --rm -v "$PWD":/var/task lambci/lambda:dotnetcore2.1 aws-lambda-function::aws_lambda_function.Function::FunctionHandler '"iFew"'
+$ docker run --rm -v "$PWD":/var/task -e AWS_LAMBDA_FUNCTION_MEMORY_SIZE=128 -e AWS_LAMBDA_FUNCTION_TIMEOUT=30  lambci/lambda:dotnetcore2.1  aws-lambda-function::aws_lambda_function.Function::FunctionHandler '"iFew"'
 ```
